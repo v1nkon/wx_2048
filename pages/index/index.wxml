@@ -1,0 +1,10 @@
+<!--index.wxml-->
+<view class="container">
+  <image   class="logo" src='../../images/logo.png'>
+  </image>
+  <view class='slots'>
+    <block wx:for="{{slots}}">
+      <text class="slot {{index === current ? 'active': ''}}"></text>
+    </block>
+  </view>
+</view>

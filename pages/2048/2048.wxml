@@ -1,0 +1,44 @@
+<!--pages/2048/2048.wxml-->
+<view class='container'>
+  <loading hidden="{{hidden}}">
+  </loading>
+  <view class='head'>
+    <view class='lside'>
+      <text class='title'>2048</text>
+      
+    </view>
+    <view class='rside rside2'>
+      <text class='score-title'>best</text>
+      <text class='score'>{{best}}</text>
+    </view>
+    <view class='rside'>
+      <text class='score-title'>score</text>
+      <text class='score'>{{score}}</text>
+    </view>
+    <view class='bside'>
+      <text class='info'>{{nickName}}</text>
+      <text class='play' bindtap='gameStart'>{{start}}</text>
+    </view>
+  </view>
+  <view class='out_box' bindtouchstart='touchStart' bindtouchmove='touchMove' bindtouchend='touchEnd'>
+    <block wx:for="{{data}}" wx:for-item="row" wx:for-index="rowindex" wx:key="rowindex">
+      <view class='cell' wx:for="{{row}}" wx:for-item="cell" wx:for-index="cellindex"  wx:key="cellindex">
+        <view class='cell-con cell-con-{{cell}} ' animation="{{animations[rowindex][cellindex]}}">
+          {{cell}}
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class='bottom'>
+    <text class="rank" bindtap='checkRank'>查看排行</text>
+    <text class='setting' bindtap='setGame'>游戏配置</text>
+  </view>
+  <audio id="normal" hidden='{{true}}' src='/audio/normal.mp3'>
+  </audio>
+  <!-- game over -->
+  <view class='game-over' hidden='{{!isGameOver}}'>
+    <text class='nowScore'>历史最高分：{{best}}</text>
+    <text class='nowScore'>本次成绩：{{score}}</text>
+    <text class='pro' bindtap='gameStart'>重新开始</text> 
+  </view> 
+</view>

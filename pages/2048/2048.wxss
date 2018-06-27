@@ -1,0 +1,167 @@
+/* pages/2048/2048.wxss */
+.container {
+  color: #776e65;
+  background-color: #faf8ee;
+  height: 100vh;
+  position: relative;
+} 
+.head {
+  text-align: center;
+}
+.lside {
+  width: 220rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  box-sizing: border-box;
+  float: left;
+  position: relative;
+  margin-right: 100rpx;
+}
+.title {
+  font-size: 60rpx;
+  font-weight: bold;  
+}
+.bside{
+  position: relative;
+  width:600rpx;
+  height:100rpx;
+  margin-top:100rpx;
+}
+.info {
+  font-size: 20px;
+  background-color: #bbada0;
+  color: #fff;
+  border-radius: 5px;
+  width: 130px;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.play{
+  font-size: 20px;
+  background-color: #bbada0;
+  color: #fff;
+  border-radius: 5px;
+  width: 130px;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.rside {
+  background-color: #bbada0;
+  float: right;
+  width: 100rpx;
+  height: 100rpx; 
+  padding-top: 10rpx;
+  box-sizing: border-box;
+  border-radius: 5rpx; 
+  opacity: 0.7;
+  margin-right: 15rpx;
+}
+.rside text {
+  display:block;
+  text-align:center;
+  font-size:35rpx;
+  font-weight:bold;
+  width:100rpx;
+  height:50rpx;
+  line-height:50rpx;
+
+}
+.score {
+  color: #fff;
+}
+.out_box{
+  width: 640rpx;
+  height: 640rpx;
+  padding-right: 20rpx;
+  padding-bottom: 20rpx;
+  background-color:  #bbada0;
+  border-radius: 10rpx;
+  margin-top: -50px;
+  overflow: hidden;
+}
+.cell{
+  float: left;
+  width: 140rpx;
+  height: 140rpx;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+  border-radius: 5rpx;
+  background-color: rgba(238, 228, 218, 0.35);
+}
+
+.cell-con{
+  width: 140rpx;
+  height: 140rpx;
+  line-height: 140rpx;
+  font-size: 60rpx;
+  color: white;
+  text-align: center;
+}
+
+.game-over {
+  position: absolute;
+  z-index: 3;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  text-align: center;
+  padding-top: 20vw;
+  box-sizing: border-box;
+} 
+.game-over text {
+  display: block;
+}
+.nowScore {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.pro {
+  font-weight: bold;
+  font-size: 30px;
+}
+.bottom{
+  width: 50vw;
+  height: 150rpx;
+  text-align: center;
+  position: relative;
+  top: -40px;
+}
+.rank,.setting{
+  width: 50vw;
+  height: 35px;
+  line-height: 35px;
+  display: inline-block;
+  background: #bbada0;
+  color: white;
+  border-radius: 10px;
+}
+.rank{
+  margin-bottom: 10rpx;
+}
+.cell-con-2{background-color:#eee3da}
+.cell-con-4{background-color:#ede0c8}
+.cell-con-8{background-color:#f2b179}
+.cell-con-16{background-color:#f59563}
+.cell-con-32{background-color:#f67c5f}
+.cell-con-64{background-color:#f65e3b}
+.cell-con-128{background-color:#edcf72}
+.cell-con-256{background-color:#edcc61}
+.cell-con-512{background-color:#9c0}
+.cell-con-1024{background-color:#33b5e5}
+.cell-con-2048{background-color:#09c}
+.cell-con-4096{background-color:#a6c}
+.cell-con-8192{background-color:#93c}
+.cell-con-2,.cell-con-4{color:#776e65}
+.cell-con-1024,.cell-con-2048,.cell-con-4096,.cell-con-8192{font-size:40rpx}
